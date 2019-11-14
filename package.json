@@ -1,0 +1,33 @@
+{
+  "name": "sms-counter",
+  "version": "1.0.0",
+  "description": "Character counter for SMS messages.",
+  "main": "SmsCounter.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && ./node_modules/.bin/tsc --pretty -p tsconfig.json",
+    "lint": "./node_modules/.bin/tslint -t stylish --project tsconfig.json",
+    "lint:fix": "./node_modules/.bin/tslint 'src/**/*.ts' --format stylish --fix --project tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ldziewa/sms-counter.git"
+  },
+  "keywords": [
+    "sms",
+    "sms-counter"
+  ],
+  "author": "Danilo R. Gonçalves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ldziewa/sms-counter/issues"
+  },
+  "homepage": "https://github.com/ldziewa/sms-counter#readme",
+  "devDependencies": {
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2"
+  }
+}

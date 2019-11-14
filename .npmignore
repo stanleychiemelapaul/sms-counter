@@ -1,0 +1,9 @@
+*.ts
+tsconfig.json
+.npmignore
+!**/*.d.ts
+src/
+test/
+*.tgz
+.git/
+.idea/

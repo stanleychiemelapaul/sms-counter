@@ -1,0 +1,7 @@
+# IDE directory
+.idea
+
+# Project build and modules directory
+dist
+node_modules
+.nyc_output
