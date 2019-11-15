@@ -13,7 +13,8 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "sourceRoot": "./src",
-    "target": "es2018"
+    "target": "es2018",
+    "declaration": true
   },
   "exclude": [
     "node_modules"

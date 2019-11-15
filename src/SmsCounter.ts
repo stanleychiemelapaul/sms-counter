@@ -3,19 +3,6 @@ const gsm7bitExChar = `\\^{}\\\\\\[~\\]|€`;
 const gsm7bitRegExp = RegExp(`^[${gsm7bitChars}]*$`);
 const gsm7bitExRegExp = RegExp(`^[${gsm7bitChars + gsm7bitExChar}]*$`);
 const gsm7bitExOnlyRegExp = RegExp(`^[\\${gsm7bitExChar}]*$`);
-const GSM_7BIT = 'GSM_7BIT';
-const GSM_7BIT_EX = 'GSM_7BIT_EX';
-const UTF16 = 'UTF16';
-const messageLength: any = {
-    GSM_7BIT: 160,
-    GSM_7BIT_EX: 160,
-    UTF16: 70,
-};
-const multiMessageLength: any = {
-    GSM_7BIT: 153,
-    GSM_7BIT_EX: 153,
-    UTF16: 67,
-};
 
 function detectEncoding(text: string): string {
     switch (false) {
@@ -39,6 +26,21 @@ function countGsm7bitEx(text: string): number {
 
     return results.length;
 }
+
+export const GSM_7BIT = 'GSM_7BIT';
+export const GSM_7BIT_EX = 'GSM_7BIT_EX';
+export const UTF16 = 'UTF16';
+
+export const messageLength: any = {
+    GSM_7BIT: 160,
+    GSM_7BIT_EX: 160,
+    UTF16: 70,
+};
+export const multiMessageLength: any = {
+    GSM_7BIT: 153,
+    GSM_7BIT_EX: 153,
+    UTF16: 67,
+};
 
 export interface ICounterResult {
     encoding: string;

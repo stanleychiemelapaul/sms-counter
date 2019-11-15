@@ -1,8 +1,9 @@
 {
-  "name": "sms-counter",
-  "version": "1.0.0",
+  "name": "sms-counter-npm",
+  "version": "1.0.4",
   "description": "Character counter for SMS messages.",
-  "main": "SmsCounter.js",
+  "main": "dist/SmsCounter.js",
+  "types": "dist/SmsCounter.d.ts",
   "directories": {
     "example": "examples"
   },
@@ -27,7 +28,12 @@
   },
   "homepage": "https://github.com/ldziewa/sms-counter#readme",
   "devDependencies": {
+    "@types/node": "^12.12.7",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.2",
+    "ts-node": "^8.5.0"
+  },
+  "dependencies": {
+
   }
 }
