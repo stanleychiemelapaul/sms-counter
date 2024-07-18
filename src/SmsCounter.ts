@@ -27,16 +27,16 @@ function countGsm7bitEx(text: string): number {
     return results.length;
 }
 
-export const GSM_7BIT = 'GSM_7BIT';
-export const GSM_7BIT_EX = 'GSM_7BIT_EX';
-export const UTF16 = 'UTF16';
+const GSM_7BIT = 'GSM_7BIT';
+const GSM_7BIT_EX = 'GSM_7BIT_EX';
+const UTF16 = 'UTF16';
 
-export const messageLength: any = {
+const messageLength: any = {
     GSM_7BIT: 160,
     GSM_7BIT_EX: 160,
     UTF16: 70,
 };
-export const multiMessageLength: any = {
+const multiMessageLength: any = {
     GSM_7BIT: 153,
     GSM_7BIT_EX: 153,
     UTF16: 67,
@@ -50,7 +50,7 @@ export interface ICounterResult {
     remaining: number;
 }
 
-export function count(text: string): ICounterResult {
+function count(text: string): ICounterResult {
     const encoding = detectEncoding(text);
     let length = text.length;
     if (encoding === GSM_7BIT_EX) {
@@ -70,3 +70,12 @@ export function count(text: string): ICounterResult {
 
     return { encoding, length, per_message: perMessage, remaining, messages };
 }
+
+module.exports = {
+    GSM_7BIT,
+    GSM_7BIT_EX,
+    UTF16,
+    messageLength,
+    multiMessageLength,
+    count
+};
